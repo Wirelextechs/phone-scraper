@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Scraper Pro</title>
+    <link rel="stylesheet" href="sidepanel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="icon-blob"></div>
+                <h1>Scraper <span>Pro</span></h1>
+            </div>
+            <p class="tagline">Real-time number extraction</p>
+        </header>
+
+        <section class="controls">
+            <div class="setting-group">
+                <label for="country-select">Detection Region</label>
+                <select id="country-select">
+                    <option value="GH">🇬🇭 Ghana (+233)</option>
+                    <option value="NG">🇳🇬 Nigeria (+234)</option>
+                    <option value="KE">🇰🇪 Kenya (+254)</option>
+                    <option value="ZA">🇿🇦 South Africa (+27)</option>
+                    <option value="US">🇺🇸 USA/Canada (+1)</option>
+                    <option value="UK">🇬🇧 UK (+44)</option>
+                    <option value="GLOBAL">🌐 Global Search</option>
+                </select>
+            </div>
+            
+            <div class="toggle-group">
+                <span>Auto-Save</span>
+                <label class="switch">
+                    <input type="checkbox" id="auto-save-toggle" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span id="total-count">0</span>
+                <label>Total Saved</label>
+            </div>
+        </section>
+
+        <section class="actions">
+            <div class="export-group">
+                <input type="text" id="filename-input" placeholder="List name (e.g. Sales_Leads)">
+                <button id="export-csv" class="btn secondary">Export CSV</button>
+            </div>
+            <button id="clear-all" class="btn danger">Clear All</button>
+        </section>
+
+        <main id="number-list-container">
+            <div class="list-header">
+                <h3>Captured Numbers</h3>
+                <span id="live-indicator" class="pulse">LIVE</span>
+            </div>
+            <div id="number-list" class="number-list">
+                <!-- Numbers will be injected here -->
+                <div class="empty-state">
+                    <p>Start browsing to capture numbers...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 WireNet Pro</p>
+        </footer>
+    </div>
+    <script src="sidepanel.js"></script>
+</body>
+</html>
